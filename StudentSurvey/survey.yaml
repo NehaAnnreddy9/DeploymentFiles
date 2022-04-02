@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: survey-deployment
+  namespace: default
   labels:
     app: survey
 spec:
@@ -11,11 +12,12 @@ spec:
       app: survey
   template:
     metadata:
+      namespace: default
       labels:
         app: survey
     spec:
       containers:
       - name: survey
-        image: nannredd/studentsurvey:24
+        image: nannredd/studentsurvey:25
         ports:
         - containerPort: 8080
