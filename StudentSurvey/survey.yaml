@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: survey
-        image: nannredd/studentsurvey:1.0
+        image: nannredd/studentsurvey:latest
         ports:
         - containerPort: 8080
